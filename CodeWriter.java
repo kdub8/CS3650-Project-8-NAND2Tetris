@@ -1,3 +1,17 @@
+
+/*
+ * Author: Kevin Wong
+ * Assignment: NAND2TETRIS Project 8
+ * Date: 11/2/2023
+ * Professor: Nima Davarpanah
+ * Course: CS3650-01
+ * File: CodeWriter.java
+ * File Description: The `CodeWriter` class is responsible for translating VM commands into HACK assembly code. 
+ * It opens an output file for writing the assembly code, and it offers methods for writing various types of VM commands, 
+ * including arithmetic, push, pop, label, goto, if-goto, function, return, and call commands. The class maintains internal 
+ * variables for label management, jump flags, and the current file name being processed. It also provides templates for 
+ * generating assembly code for various command types, handling memory access and control flow.
+ */
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -18,7 +32,7 @@ public class CodeWriter {
     /**
      * Open an output file and be ready to write content
      * 
-     * @param fileOut can be a directory!
+     * @param fileOut can be a directory
      */
     public CodeWriter(File fileOut) {
 

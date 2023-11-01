@@ -1,10 +1,24 @@
+
+/*
+ * Author: Kevin Wong
+ * Assignment: NAND2TETRIS Project 8
+ * Date: 11/2/2023
+ * Professor: Nima Davarpanah
+ * Course: CS3650-01
+ * File: Parser.java
+ * File Description: The `Parser` class is responsible for handling the parsing of a single `.vm` file and 
+ * encapsulating access to the input code. It reads VM commands, parses them, and provides convenient access to their components 
+ * while removing all white space and comments. The class defines constants for various VM command types, including arithmetic, 
+ * push, pop, label, goto, if-goto, function, return, and call commands, with methods to retrieve their details.
+ * The class's constructor opens the input file for parsing, and the `advance` method reads the next command from the input and 
+ * sets it as the current command. The class provides methods to determine the command type, retrieve the first and second 
+ * arguments, and handle different types of VM commands. It also includes utility methods for removing comments, spaces, and
+ *  extracting file extensions.
+ */
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.IllegalFormatException;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Handles the parsing of a single .vm file, and encapsulates access to the

@@ -1,6 +1,25 @@
+
+/*
+ * Author: Kevin Wong
+ * Assignment: NAND2TETRIS Project 8
+ * Date: 11/2/2023
+ * Professor: Nima Davarpanah
+ * Course: CS3650-01
+ * File: VMTranslator.java
+ * File Description: The `VMTranslator` class is the main entry point for translating VM code into assembly language code. 
+ * It provides functionality for handling both single VM files and entire directories containing VM files.The `getVMFiles` 
+ * method takes a directory and returns all `.vm` files within it, storing them in an `ArrayList`.The `main` method serves as 
+ * the application's entry point. It processes command-line arguments to determine whether to translate a single VM file or 
+ * all VM files in a directory. It initializes the `CodeWriter` for writing the resulting assembly code and manages the
+ * translation process for each VM file.If the input is a single VM file, it checks whether the file has a `.vm` extension 
+ * and, if so, translates it to an assembly language file (`.asm`). If the input is a directory, it locates and translates 
+ * all `.vm` files within the directory.The program also takes care of initializing the output file, writing initialization 
+ * code, and appropriately handling different types of VM commands like arithmetic, push, pop, label, goto, if-goto, return, 
+ * function, and call, by invoking methods of the `CodeWriter` class.The resulting assembly code is saved to an output file, 
+ * and the program prints a message indicating the file's creation.
+ */
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  * 
